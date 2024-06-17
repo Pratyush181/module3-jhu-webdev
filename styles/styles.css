@@ -1,0 +1,99 @@
+* {
+    font-family: Arial, sans-serif;
+    color: black;
+    margin: 0;
+}
+
+.navbar {
+    background-color: grey;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+.site-title {
+    font-size: 150%;
+    align-items: center;
+    font-weight: 700;;
+}
+
+p {
+  color: black;
+  padding: 14px;
+}
+
+.our-menu {
+    align-items: center;
+    text-align: center;
+    font-size: 150%;
+    font-weight: 700;
+}
+
+.box {
+    background-color: grey;
+    margin: 20px 20px 20px 20px;
+}
+
+.title {
+    font-size: 140%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.desc {
+    font-size: 115%;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked ~ .dropdown-menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+    .menu-toggle:checked ~ .dropdown-menu {
+        display: flex;
+    }
+}
